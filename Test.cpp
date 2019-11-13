@@ -94,12 +94,37 @@ void Test::test04()
 
 void Test::test05()
 {
+  std::cout << "Test05: Enqueue 448 on empty queue, enqueue 268, dequeue, then peekFront returns 448: ";
+  Queue testerQueue;
+  testerQueue.enqueue(448);
+  testerQueue.enqueue(268);
+  testerQueue.dequeue();
 
+  if(testerQueue.peekFront() == 448)
+  {
+    std::cout << "PASSED\n";
+  }
+  else
+  {
+    std::cout << "FAILED\n";
+  }
 }
+
 
 void Test::test06()
 {
+  std::cout << "Test06: Dequeue on empty queue throws std::runtime_error: ";
+  Queue testerQueue;
 
+  try
+  {
+    testerQueue.dequeue();
+    std::cout << "FAILED\n";
+  }
+  catch(std::runtime_error& rte)
+  {
+    std::cout << "PASSED\n";
+  }
 }
 
 void Test::test07()

@@ -41,12 +41,12 @@ class Test
 	  void test04();
 
     /**
-    * @brief
+    * @brief Creates an empty Queue, enqueue 448, enqueue 268, then dequeue, and verifies peekFront() returns 448
     **/
 	  void test05();
 
     /**
-    * @brief
+    * @brief Creates an empty Queue and verifies dequeue() throws a std::runtime_error
     **/
   	void test06();
 
