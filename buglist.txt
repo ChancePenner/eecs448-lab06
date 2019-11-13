@@ -4,5 +4,5 @@
 *	@date 2019.11.13
 */
 
-1. When you enqueue multiple values, peekFront() is not returning the first value. This is either because
-   peekFront() is returning m_back instead of m_front, or m_front is being updated to the incorrect values.
+1. When you enqueue multiple values, peekFront() is not returning the first value. This is because
+   peekFront() is returning m_back instead of m_front.

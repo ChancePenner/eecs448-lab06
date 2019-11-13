@@ -51,7 +51,7 @@ class Test
   	void test06();
 
     /**
-    * @brief
+    * @brief Enqueue 448 on empty queue, verfify peekFront returns 448, enqueue 268 verfiy peekFront returns 448, and enqueue 168, and verify peekFront returns 448: ";
     **/
   	void test07();
 

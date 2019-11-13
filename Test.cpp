@@ -129,7 +129,38 @@ void Test::test06()
 
 void Test::test07()
 {
+  std::cout << "Test07: Enqueue 448 on empty queue, verfify peekFront returns 448, enqueue 268 verfiy peekFront returns 448, and enqueue 168, and verify peekFront returns 448: ";
+  Queue testerQueue;
+  bool is448_1 = false;
+  bool is448_2 = false;
+  bool is448_3 = false;
 
+  testerQueue.enqueue(448);
+  if(testerQueue.peekFront() == 448)
+  {
+    is448_1 = true;
+  }
+
+  testerQueue.enqueue(268);
+  if(testerQueue.peekFront() == 448)
+  {
+    is448_2 = true;
+  }
+
+  testerQueue.enqueue(168);
+  if(testerQueue.peekFront() == 448)
+  {
+    is448_3 = true;
+  }
+
+  if(is448_1 && is448_2 && is448_3)
+  {
+    std::cout << "PASSED\n";
+  }
+  else
+  {
+    std::cout << "FAILED\n";
+  }
 }
 
 void Test::test08()
