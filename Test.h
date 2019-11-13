@@ -16,30 +16,33 @@ class Test
   public:
   Test();
 
+  void runTests();
+
   private:
 
     /**
-    * @brief 
+    * @brief Creates an empty Queue and verifies isEmpty() returns true
     **/
     void test01();
 
     /**
-    * @brief
+    * @brief Creates an empty Queue, enqueue a value, and verifies isEmpty() returns false
     **/
     void test02();
 
     /**
-    * @brief
+    * @brief Creates an empty Queue, enqueue 448, and verifies peekFront() returns 448
     **/
     void test03();
 
     /**
-    * @brief
+    * @brief Creates an empty Queue, enqueue 448 then enqueue 268, and verifies peekFront() returns 448
     **/
 	  void test04();
 
     /**
     * @brief
+    **/
 	  void test05();
 
     /**

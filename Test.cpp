@@ -9,7 +9,7 @@
 Test::Test()
 {}
 
-void Test::QueueTester()
+void Test::runTests()
 {
   test01();
 	test02();
@@ -30,22 +30,66 @@ void Test::QueueTester()
 
 void Test::test01()
 {
-  
+  std::cout << "Test 01: New Queue is empty: ";
+  Queue testerQueue;
+
+  if(testerQueue.isEmpty())
+  {
+    std::cout << "PASSED\n";
+  }
+  else
+  {
+    std::cout << "FAILED\n";
+  }
 }
 
 void Test::test02()
 {
+  std::cout << "Test 02: Enqueing an empty Queue makes it not empty: ";
+  Queue testerQueue;
+  testerQueue.enqueue(4);
 
+  if(!testerQueue.isEmpty())
+  {
+    std::cout << "PASSED\n";
+  }
+  else
+  {
+    std::cout << "FAILED\n";
+  }
 }
 
 void Test::test03()
 {
+  std::cout << "Test03: Enqueue 448 on empty queue then peekFront returns 448: ";
+  Queue testerQueue;
+  testerQueue.enqueue(448);
 
+  if(testerQueue.peekFront() == 448)
+  {
+    std::cout << "PASSED\n";
+  }
+  else
+  {
+    std::cout << "FAILED\n";
+  }
 }
 
 void Test::test04()
 {
+  std::cout << "Test04: Enqueue 448 on empty queue then enqueue 268, then peekFront returns 448: ";
+  Queue testerQueue;
+  testerQueue.enqueue(448);
+  testerQueue.enqueue(268);
 
+  if(testerQueue.peekFront() == 448)
+  {
+    std::cout << "PASSED\n";
+  }
+  else
+  {
+    std::cout << "FAILED\n";
+  }
 }
 
 void Test::test05()
