@@ -61,7 +61,7 @@ void Test::test02()
 
 void Test::test03()
 {
-  std::cout << "Test03: Enqueue 448 on empty queue then peekFront returns 448: ";
+  std::cout << "Test 03: Enqueue 448 on empty queue then peekFront returns 448: ";
   Queue testerQueue;
   testerQueue.enqueue(448);
 
@@ -77,7 +77,7 @@ void Test::test03()
 
 void Test::test04()
 {
-  std::cout << "Test04: Enqueue 448 on empty queue then enqueue 268, then peekFront returns 448: ";
+  std::cout << "Test 04: Enqueue 448 on empty queue then enqueue 268, then peekFront returns 448: ";
   Queue testerQueue;
   testerQueue.enqueue(448);
   testerQueue.enqueue(268);
@@ -94,7 +94,7 @@ void Test::test04()
 
 void Test::test05()
 {
-  std::cout << "Test05: Enqueue 448 on empty queue, enqueue 268, dequeue, then peekFront returns 448: ";
+  std::cout << "Test 05: Enqueue 448 on empty queue, enqueue 268, dequeue, then peekFront returns 448: ";
   Queue testerQueue;
   testerQueue.enqueue(448);
   testerQueue.enqueue(268);
@@ -113,7 +113,7 @@ void Test::test05()
 
 void Test::test06()
 {
-  std::cout << "Test06: Dequeue on empty queue throws std::runtime_error: ";
+  std::cout << "Test 06: Dequeue on empty queue throws std::runtime_error: ";
   Queue testerQueue;
 
   try
@@ -129,7 +129,7 @@ void Test::test06()
 
 void Test::test07()
 {
-  std::cout << "Test07: Enqueue 448 on empty queue, verfify peekFront returns 448, enqueue 268 verfiy peekFront returns 448, and enqueue 168, and verify peekFront returns 448: ";
+  std::cout << "Test 07: Enqueue 448 on empty queue, verfify peekFront returns 448, enqueue 268 verfiy peekFront returns 448, and enqueue 168, and verify peekFront returns 448: ";
   Queue testerQueue;
   bool is448_1 = false;
   bool is448_2 = false;
@@ -165,7 +165,18 @@ void Test::test07()
 
 void Test::test08()
 {
+  std::cout << "Test 08: peekFront on empty Queue throws std::runtime_error: ";
+  Queue testerQueue;
 
+  try
+  {
+    testerQueue.peekFront();
+    std::cout << "FAILED\n";
+  }
+  catch(std::runtime_error& rte)
+  {
+    std::cout << "PASSED\n";
+  }
 }
 
 void Test::test09()

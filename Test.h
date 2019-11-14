@@ -56,7 +56,7 @@ class Test
   	void test07();
 
     /**
-    * @brief
+    * @brief Verify peekFront throws std::runtime_error on empty queue
     **/
   	void test08();
 
