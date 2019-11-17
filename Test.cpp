@@ -23,9 +23,6 @@ void Test::runTests()
 	test10();
 	test11();
 	test12();
-	test13();
-	test14();
-	test15();
 }
 
 void Test::test01()
@@ -229,18 +226,36 @@ void Test::test11()
 
 void Test::test12()
 {
-  
-}
+    std::cout << "Test 12: Verifies peekFront does not alter any values: ";
+    Queue testerQueue;
+    testerQueue.enqueue(448);
+    testerQueue.enqueue(268);
+    testerQueue.enqueue(168);
 
-void Test::test13()
-{
+    bool check1 = false;
+    bool check2 = false;
+    bool check3 = false;
 
-}
-void Test::test14()
-{
-
-}
-void Test::test15()
-{
-
+    if(testerQueue.peekFront() == 448)
+    {
+      check1 = true;
+      testerQueue.dequeue();
+    }
+    if(testerQueue.peekFront() == 268)
+    {
+      check2 = true;
+      testerQueue.dequeue();
+    }
+    if(testerQueue.peekFront() == 168)
+    {
+      check3 = true;
+    }
+    if(check1 && check2 && check3)
+    {
+      std::cout << "PASSED\n";
+    }
+    else
+    {
+      std::cout << "FAILED\n";
+    }
 }

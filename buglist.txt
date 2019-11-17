@@ -8,4 +8,7 @@
    enqueue is placing the nodes in the front of the queue instead of the back.
 2. Dequeue and peekFront seem to not work at times, but this is not because of errors on their part, it is
    because enquue is putting the nodes in the wrong order
-3. There are memory leaks associated with enqueue. This is because 
+3. There are memory leaks most likely due to the destructor not deleting any nodes at all. When specifically calling
+   dequeue enough times to empty the queue, valgrind shows no memory leaks at all. So it seems like the destructor
+   is just not calling to dequeue the entirety of the queue's length.
+4. Enqueue is supposed to only take in ints, but is able to take in chars as well.

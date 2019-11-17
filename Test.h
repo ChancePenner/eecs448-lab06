@@ -76,24 +76,9 @@ class Test
   	void test11();
 
     /**
-    * @brief
+    * @brief Verifies peekFront does not alter any values
     **/
   	void test12();
-
-    /**
-    * @brief
-    **/
-  	void test13();
-
-    /**
-    * @brief
-    **/
-  	void test14();
-
-    /**
-    * @brief
-    **/
-  	void test15();
 
 };
 
