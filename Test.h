@@ -61,17 +61,17 @@ class Test
   	void test08();
 
     /**
-    * @brief
+    * @brief verifies that isEmpty returns true after dequeing a queue of size 1
     **/
   	void test09();
 
     /**
-    * @brief
+    * @brief verifies peekFront returns correct value after enqueing, dequeing, and then enqueing again
     **/
   	void test10();
 
     /**
-    * @brief
+    * @brief verifies that enqueue cannot take in a char by checking if the queue is still empty
     **/
   	void test11();
 

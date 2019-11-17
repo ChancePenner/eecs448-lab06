@@ -100,7 +100,7 @@ void Test::test05()
   testerQueue.enqueue(268);
   testerQueue.dequeue();
 
-  if(testerQueue.peekFront() == 448)
+  if(testerQueue.peekFront() == 268)
   {
     std::cout << "PASSED\n";
   }
@@ -181,22 +181,55 @@ void Test::test08()
 
 void Test::test09()
 {
-
+  std::cout << "Test 09: isEmpty returns true after dequeing a queue of size 1: ";
+  Queue testerQueue;
+  testerQueue.enqueue(448);
+  testerQueue.dequeue();
+  if(testerQueue.isEmpty())
+  {
+    std::cout << "PASSED\n";
+  }
+  else
+  {
+    std::cout << "FAILED\n";
+  }
 }
 
 void Test::test10()
 {
-
+  std::cout << "Test 10: Verifies peekFront returns correct value after enqueing, dequeing, and then enqueing again: ";
+  Queue testerQueue;
+  testerQueue.enqueue(448);
+  testerQueue.dequeue();
+  testerQueue.enqueue(268);
+  if(testerQueue.peekFront() == 268)
+  {
+    std::cout << "PASSED\n";
+  }
+  else
+  {
+    std::cout << "FAILED\n";
+  }
 }
 
 void Test::test11()
 {
-
+  std::cout << "Test 11: Verifies that enqueue cannot take in a char: ";
+  Queue testerQueue;
+  testerQueue.enqueue('d');
+  if(testerQueue.isEmpty())
+  {
+    std::cout << "PASSED\n";
+  }
+  else
+  {
+    std::cout << "FAILED\n";
+  }
 }
 
 void Test::test12()
 {
-
+  
 }
 
 void Test::test13()
